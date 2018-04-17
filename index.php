@@ -17,24 +17,32 @@ get_header();
 						
 
 <h1>
-Explore videos
+Explore transmissões passadas
 </h1>
 
 <div id="campaignbtns">
-<h3>Filter by campaigns</h3>
-  <button href="" class="btn active" value="post"> All campaigns</button>
-  <button class="btn" data-target="first" value="cat-1"> Campaign1</button>
-  <button class="btn" data-target="second" value="cat-2"> Campaign2</button>
-  <button class="btn" value="cat-3"> Campaign3</button>
-  <button class="btn" value="cat-4"> Campaign4</button>
+<h3>Filtre por campanha</h3>
+  <button href="" class="btn active" value="post">Todos</button>
+  <button class="btn" data-target="first" value="acari">Acari</button>
+  <button class="btn" data-target="second" value="alemao">Complexo do Alemão</button>
+  <button class="btn" data-target="third" value="mariellepresente">MariellePresente</button>
+  <button class="btn" data-target="fourth" value="rio-2016">Rio 2016</button>
 </div>
 
 <div class="campaigndescription" id="first">
-	<p><?php echo category_description(get_category_by_slug( 'cat-1' )->term_id); ?></p>
+	<p><?php echo category_description(get_category_by_slug( 'acari' )->term_id); ?></p>
 </div>
 
 	<div class="campaigndescription" id="second">
-	<p><?php echo category_description(get_category_by_slug( 'cat-2' )->term_id); ?></p>
+	<p><?php echo category_description(get_category_by_slug( 'alemao' )->term_id); ?></p>
+	</div>
+
+<div class="campaigndescription" id="third">
+	<p><?php echo category_description(get_category_by_slug( 'mariellepresente' )->term_id); ?></p>
+	</div>
+
+<div class="campaigndescription" id="fourth">
+	<p><?php echo category_description(get_category_by_slug( 'rio-2016' )->term_id); ?></p>
 	</div>
 
 
