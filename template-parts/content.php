@@ -21,8 +21,7 @@
 									<div class="overlay">
 									<div class="description">
 									<?php the_title( '<h3>', '</h3>' ); ?>
-         							  <?php the_excerpt( '<p>','</p>' ); ?> 
-         							 <div class="btn">Go to video</div> 
+         							 <div class="btn">Veja a transmissão</div> 
          							 
          							</div>
 									
