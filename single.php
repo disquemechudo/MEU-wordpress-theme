@@ -28,7 +28,6 @@ get_header();
 
 <body>
 
-<?php wp_head(); ?>
 <div class="wrap">
 
 <div class="videocontainer">
@@ -63,7 +62,7 @@ get_header();
     </div>
 	</div>
 
-<!--
+
 <div class="context">
 
 <div id="childbox">
@@ -107,20 +106,21 @@ get_header();
 			</div>
 		<div class="clearfix">
 			</div>
-		<div class="addedcontent" id="addedtranslation">
-			Translation Should Go Here
-			</div>
 			
-			<div class="addedcontent" id="addedcontext">
-			Context Should go here
+			<div id="translationandcontext">
+				<div class="addedcontent" id="addedtranslation">
+					Translation Should Go Here
+				</div>
+			
+				<div class="addedcontent" id="addedcontext">
+					Context Should go here
+				</div>
 			</div>
-
 		</div>
 	</div>
 
 	</div>
 </div>
--->
 
 
 
