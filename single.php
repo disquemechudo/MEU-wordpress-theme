@@ -67,7 +67,7 @@ get_header();
 
 <div id="childbox">
 <div id="buttonpanel">
-<button class="btn active" id="helptranslate" data-target="translation">Translate</button>
+<button class="btn active" id="helptranslate" data-target="translation">Translate this event</button>
   <button class="btn" id="givecontext" data-target="givingcontext">Give context</button>
  </div>
 
@@ -93,7 +93,7 @@ get_header();
 
 	<div class="newcontentbuttons">
 		<div id="togglecontent">
-<button class="btn active" id="seetranslation" data-target="addedtranslation">Translation</button>
+<button class="btn active" id="seetranslation" data-target="addedtranslation">Check others translations</button>
   <button class="btn" id="seecontext" data-target="addedcontext">Context</button>
 		
  </div>
