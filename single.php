@@ -72,16 +72,16 @@ get_header();
  </div>
 
 <div class="box" id="translation">
-<textarea name="text" class="translationbox"></textarea>
+<textarea name="text" class="translationbox" id="translation_input"></textarea>
 <div class="submit">
-	<button  class="btn" type="submit" value="Submit">Submit</button>
+	<button id="translation_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
 		</div>
 </div>
 
 <div class="box" id="givingcontext">
-<textarea name="text" class="translationbox"></textarea>
+<textarea name="text" class="translationbox" id="context_input"></textarea>
 <div class="submit">
-	<button  class="btn" type="submit" value="Submit">Submit</button>
+	<button id="context_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
 		</div>
 </div>
 
@@ -109,11 +109,11 @@ get_header();
 			
 			<div id="translationandcontext">
 				<div class="addedcontent" id="addedtranslation">
-					Translation Should Go Here
+					<!-- Translation Should Go Here -->
 				</div>
 			
 				<div class="addedcontent" id="addedcontext">
-					Context Should go here
+					<!-- Context Should go here -->
 				</div>
 			</div>
 		</div>
