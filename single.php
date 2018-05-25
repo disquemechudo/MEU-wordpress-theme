@@ -45,49 +45,6 @@ get_header();
 
 	</div>
 
-			<div class="tab">
-      							<input id="tab-one" type="checkbox" name="tabs">
-     							<label class="accordion-label" for="tab-one">
-     								<p>About this campaign</p>
-     								<i></i>
-     							</label>
-     							<div class="tab-content">
-									<p>
-						<?php
-						$categories = get_the_category();
-						echo category_description( $categories[0] ); ?> 
-												</p>
-									
-									</div>
-    </div>
-	</div>
-
-
-<div class="context">
-
-<div id="childbox">
-<div id="buttonpanel">
-<button class="btn active" id="helptranslate" data-target="translation">Translate this event</button>
-  <button class="btn" id="givecontext" data-target="givingcontext">Give context</button>
- </div>
-
-<div class="box" id="translation">
-<textarea name="text" class="translationbox" id="translation_input"></textarea>
-<div class="submit">
-	<button id="translation_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
-		</div>
-</div>
-
-<div class="box" id="givingcontext">
-<textarea name="text" class="translationbox" id="context_input"></textarea>
-<div class="submit">
-	<button id="context_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
-		</div>
-</div>
-
-</div>
-					
-	
 	<div id="primary">
 		<div id="content">
 
@@ -118,6 +75,53 @@ get_header();
 			</div>
 		</div>
 	</div>
+
+
+	</div>
+
+
+<div class="context">
+
+<div id="childbox">
+<div id="buttonpanel">
+<button class="btn active" id="helptranslate" data-target="translation">Translate this event</button>
+  <button class="btn" id="givecontext" data-target="givingcontext">Give context</button>
+ </div>
+
+<div class="box" id="translation">
+<textarea name="text" class="translationbox" id="translation_input"></textarea>
+<div class="submit">
+	<button id="translation_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
+		</div>
+</div>
+
+<div class="box" id="givingcontext">
+<textarea name="text" class="translationbox" id="context_input"></textarea>
+<div class="submit">
+	<button id="context_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
+		</div>
+</div>
+
+</div>
+
+			<div class="tab">
+      							<input id="tab-one" type="checkbox" name="tabs">
+     							<label class="accordion-label" for="tab-one">
+     								<p>About this campaign</p>
+     								<i></i>
+     							</label>
+     							<div class="tab-content">
+									<p>
+						<?php
+						$categories = get_the_category();
+						echo category_description( $categories[0] ); ?> 
+												</p>
+									
+									</div>
+    </div>
+					
+	
+
 
 	</div>
 </div>
