@@ -64,7 +64,7 @@ get_header();
 		<div class="clearfix">
 			</div>
 
-			<p class="toggle-icon">+</p>
+			<a class="toggle-icon">+</a>
 			
 			<div id="translationandcontext">
 				<div class="addedcontent" id="addedtranslation">
