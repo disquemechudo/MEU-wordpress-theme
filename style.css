@@ -1282,6 +1282,11 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 					left: 5%;
 					}
 
+a.toggle-icon:hover {
+	text-decoration: none;
+	cursor: pointer; 
+}
+
 
 
 @media only screen and (max-width: 1024px) {
