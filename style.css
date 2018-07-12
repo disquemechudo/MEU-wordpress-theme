@@ -1037,6 +1037,7 @@ padding-top: 0px;
 #childbox {
 	margin: 0 auto;
 	width: 60%;
+	display: none;
 }
 
 #buttonpanel {
