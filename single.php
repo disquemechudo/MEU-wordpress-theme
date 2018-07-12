@@ -9,6 +9,7 @@
 
 get_header();
 ?>
+<button class="btn" id="logout-button" id="wp-admin-bar-logout"><a id="login-logout" class="ab-item" href="http://mobile-eyes-us.itp.io/login">Login</a>                </button>
 
 <!DOCTYPE html>
 <html lang="en-US">
