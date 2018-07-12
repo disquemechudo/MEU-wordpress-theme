@@ -42,6 +42,6 @@
 	<a  href="http://mobile-eyes-us.itp.io:8000" title="Mobil-Eyes Us"><img id="site-logo" src="http://mobile-eyes-us.itp.io:8000/wp-content/uploads/2017/05/MOBIL-EYES-US_GIF_Logo.gif" alt="Mobil-Eyes Us" title="Mobil-Eyes Us" /></a>
 	</div>
 		
-<button class="btn" id="logout-button" id="wp-admin-bar-logout"><a class="ab-item" href="http://mobile-eyes-us.itp.io/logout">Log Out</a>		</button>
+<button class="btn" id="logout-button" id="wp-admin-bar-logout"><a id="login-logout" class="ab-item" href="http://mobile-eyes-us.itp.io/logout">Log Out</a>		</button>
 	
 </div>
