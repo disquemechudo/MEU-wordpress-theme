@@ -146,7 +146,6 @@ get_header();
 
 <!-- new -->
 <div id="wherepopupsgo" class="center">
-
 	<!-- Repeat -->
 	<!--
 	<div class="popup conf-modal offcenter firstoff success" role="alert">
