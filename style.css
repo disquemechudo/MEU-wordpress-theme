@@ -1079,6 +1079,23 @@ justify-content: flex-end;
 	margin-top: 0;
 }
 
+/* Incoming content fades in */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.addedcontent p {
+  animation-name: fadeInOut;
+  animation-duration: 7s;
+}
+
 
 /* Style the buttons */
 .btn {
@@ -1129,6 +1146,7 @@ justify-content: flex-end;
 .campaigndescription {
   margin-bottom: 30px;
   margin: 0 auto;
+  text-align: left;
 		width: 50%;
 	font-size: 20px;
 }
@@ -1207,7 +1225,7 @@ label::after {
 .tab i {
   position: absolute;
   transform: translate(-30px, -50px);
-  margin-top: 16px;
+  margin-top: 10px;
   right: 0;
 }
 .tab input:checked ~ .accordion-label i:before {
@@ -1230,11 +1248,23 @@ label::after {
   transform: translate(2px, 0) rotate(45deg);
 }
 
+.incoming {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.incoming h2 {
+  font-size: 20px !important;
+}
+
 
 #translation {
   text-align: center;
-  margin-top: 10px;
+  margin: 0 auto;
+  margin-top: 10px; /*not sure if to keep */
 	margin-bottom: 0;
+	position: relative;
 }
 
 #givingcontext {
@@ -1246,8 +1276,8 @@ label::after {
 
 .translationbox{
 border: 1px solid #c4c4c4;
-    width: 100%;
-    height: 150px;
+    width: 70%;
+    height: 70px;
     font-size: 16px;
     padding: 4px;
     border-radius: 4px;
@@ -1260,6 +1290,10 @@ border: 1px solid #c4c4c4;
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+.translatebtn {
+  margin: 0 auto;
+}
+
 .translationbox:focus{
   outline: none;
     border: 1px solid #8CBAC9;
@@ -1268,8 +1302,24 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
     -webkit-box-shadow: 0px 0px 8px #8CBAC9;
 }
 
+#addedtranslation {
+height:200px;
+width:80%;
+overflow:auto;
+border-top:2px solid #8CBAC9;
+border-bottom:2px solid #8CBAC9;
+padding:2%;
+margin: 0 auto;
+top-margin: 10px;
+}
+
 #addedcontext {
-	display: none;
+height:auto;
+width:80%;
+border-top:2px solid #8CBAC9;
+padding:2%;
+margin: 0 auto;
+top-margin: 10px;
 }
 
 .toggle-icon        {font-size:30px; 
@@ -1287,7 +1337,203 @@ a.toggle-icon:hover {
 	cursor: pointer; 
 }
 
+#seecontext {
+	display: none;
+}
 
+#givecontext {
+	display: none;
+}
+
+
+/* Show tooltip content on hover */
+
+
+[tooltip]{
+  position:relative;
+}
+
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top:-6px;
+    left:50%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.7) transparent transparent     transparent;
+    z-index: 99;
+    opacity:0;
+}
+
+[tooltip-position='left']::before{
+  left:0%;
+  top:50%;
+  margin-left:-12px;
+  transform:translatey(-50%) rotate(-90deg) 
+}
+[tooltip-position='top']::before{
+  left:50%;
+}
+[tooltip-position='buttom']::before{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translatey(-100%) rotate(-180deg)
+}
+[tooltip-position='right']::before{
+  left:100%;
+  top:50%;
+  margin-left:1px;
+  transform:translatey(-50%) rotate(90deg)
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left:50%;
+    top:-6px;
+    transform: translateX(-50%)   translateY(-100%);
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;
+    padding:4px 2px;
+    font-size: 12px;
+    min-width: 80px;
+    border-radius: 5px;
+    pointer-events: none;
+    padding: 4px 4px;
+    z-index:99;
+    opacity:0;
+}
+
+[tooltip-position='left']::after{
+  left:0%;
+  top:50%;
+  margin-left:-8px;
+  transform: translateX(-100%)   translateY(-50%);
+}
+[tooltip-position='top']::after{
+  left:50%;
+}
+[tooltip-position='buttom']::after{
+  top:100%;
+  margin-top:8px;
+  transform: translateX(-50%) translateY(0%);
+}
+[tooltip-position='right']::after{
+  left:100%;
+  top:50%;
+  margin-left:8px;
+  transform: translateX(0%)   translateY(-50%);
+}
+
+[tooltip]:hover::after,[tooltip]:hover::before {
+   opacity:1
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.moreinfo {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  float: left;
+  color: #FFF;
+  background: #8CBAC9;
+  cursor:pointer;
+  position: absolute;
+    top: 15px;
+  left: 50px;
+}
+
+.moreinfo:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.moretips {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  float: left;
+  color: #FFF;
+  background: #8CBAC9;
+  cursor:pointer;
+  position: absolute;
+    top: 0;
+  left: -25px;
+}
+
+.moretips:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.hiddentips {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+    left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(1, 1, 0, .7);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  z-index: 100;
+}
+
+.hiddentips.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.translationtips {
+  font-size: 22px;
+  color: white;
+        position: relative;
+    left: 48.5% !important;
+  top: 50% !important;
+   transform: translate(-50%, -51.5%) !important;
+
+}
+
+.translationtips ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.translationtips li {
+  margin: 20px;
+}
+
+.translationtips h1 {
+  font-size: 46px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.translationtips button {
+  margin: 0 auto;
+}
+
+  .icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
 
 @media only screen and (max-width: 1024px) {
 
@@ -1335,17 +1581,12 @@ body {
 	margin: 0;
 	 min-width: 100%;
     overflow-x: hidden;
-
-	overflow-wrap: break-word;
-  word-wrap: break-word;
-
-
-
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+
 
 h1 {
 	font-size: 40px !important;
@@ -1419,7 +1660,7 @@ h3 {
 
 .translationbox {
     width: 100%;
-    height: 250px;
+    height: 70px;
     font-size: 22px;
     margin: 0 auto;
     }
@@ -1436,7 +1677,7 @@ margin-top: -46px;
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
 
 
 	
@@ -1461,6 +1702,12 @@ height: 400px;
 	.fb-video {
 			margin-bottom: 0px !important;
 	}
+
+.translationtips {
+    left: 47.5% !important;
+  top: 50% !important;
+   transform: translate(-50%, -52.5%) !important;
+}	
 	
 }
 
@@ -1484,8 +1731,16 @@ h3 {
 }
 
 #childbox {
+	text-align: center;
+  margin: 0 auto;
 	width: 100%;
 }
+
+  #translation {
+      text-align: center;
+    margin: 0 auto;
+  }
+
 	
 
 	/*
@@ -1531,4 +1786,82 @@ h3 {
 		display: none;
 	}
 	
+}
+
+
+  #addedtranslation {
+height:230px;
+width:90%;
+}
+
+#addedcontext {
+  height:230px;
+width:90%;
+}
+
+.sendbtn {
+    font-size: 12px !important;
+    padding: 5px !important;
+  border-radius: 6px !important;
+  margin: 4px !important;
+  display: table-cell;
+  float: left;
+}
+
+
+
+
+
+.translatebtn {
+  margin: 0 auto;
+}
+
+.moreinfo {
+  left: 0;
+}
+
+.moretips {
+    top: -25px;
+  left: 2px;
+}
+  
+}
+
+
+@media only screen and (max-width: 500px) {
+
+.translationtips {
+  font-size: 18px !important;
+    left: 45% !important;
+  top: 50% !important;
+   transform: translate(-50%, -55%) !important;
+}
+
+.translationtips ul {
+  width: 90% !important;
+}
+
+.translationtips h1 {
+  font-size: 30px;
+}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+.translationtips {
+  font-size: 16px !important;
+}
+
+
+.translationtips h1 {
+  font-size: 26px !important;
+}
+
+}
+
+@media screen and (orientation: landscape) {
+  .firstoff {
+  margin-top: 20%;
+}
 }
