@@ -9,6 +9,7 @@
 
 get_header();
 ?>
+<button class="btn" id="logout-button" id="wp-admin-bar-logout"><a id="login-logout" class="ab-item" href="http://mobile-eyes-us.itp.io/login">Login</a>                </button>
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -172,5 +173,45 @@ get_header();
 	</div>
 </div>
 
+<!-- original -->
+<!--
+<div class="popup conf-modal center success" role="alert">
+	<div class="popup-container">
+		<div class="title-text"></div>
+	  	<h1>Help us translate!</h1></div>
+  		<p id="popupcontent"></p>
+  		<div class="modal-footer">
+    		<div class="exit conf-but aqua" onClick="dismissPopup()">Ok</div>
+		</div>    
+	</div>
+</div>
+-->
+<!-- end original -->
 
+<!-- new -->
+<div id="wherepopupsgo" class="center">
+	<!-- Repeat -->
+	<!--
+	<div class="popup conf-modal offcenter firstoff success" role="alert">
+		<div class="popup-container">
+			<p id="popupcontent"></p>
+  			<div class="modal-footer">
+    			<div class="exit conf-but" onClick="dismissPopup()">OK</div>
+			</div>    
+		</div>
+	</div>
+	-->
+	<!-- End Repeat -->
 
+	<!-- Repeat Example 
+	<div class="popup conf-modal offcenter success" role="alert">
+		<div class="popup-container">
+			<p>We need help translating a live stream. Can you help? </p>
+			<div class="modal-footer">
+				<div class="exit conf-but" onClick="">OK</div>
+			</div>    
+		</div>
+	</div>
+	-->
+</div>
+<!-- end new -->

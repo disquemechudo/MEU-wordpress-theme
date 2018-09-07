@@ -1037,6 +1037,7 @@ padding-top: 0px;
 #childbox {
 	margin: 0 auto;
 	width: 60%;
+	display: none;
 }
 
 #buttonpanel {
@@ -1194,7 +1195,8 @@ justify-content: flex-end;
 }
 
 .tab p {
-  margin: 0px;
+  margin: 0 auto !important;
+  text-align: center !important;
 }
 
 .tab-content p {
@@ -1789,6 +1791,7 @@ h3 {
 }
 
 
+
   #addedtranslation {
 height:230px;
 width:90%;
@@ -1808,13 +1811,6 @@ width:90%;
   float: left;
 }
 
-
-
-
-
-.translatebtn {
-  margin: 0 auto;
-}
 
 .moreinfo {
   left: 0;
@@ -1865,3 +1861,4 @@ width:90%;
   margin-top: 20%;
 }
 }
+
