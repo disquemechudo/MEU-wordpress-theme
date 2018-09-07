@@ -22,6 +22,15 @@ get_header();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
 	
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">	
 
@@ -122,8 +131,6 @@ get_header();
 
 		<div class="clearfix">
 			</div>
-
-			<a class="toggle-icon">+</a>
 			
 			<div id="translationandcontext">
 				<div class="incoming">
@@ -131,6 +138,7 @@ get_header();
 				<a target="_blank" class="moreinfo" tooltip="You can view your and others' translations coming in here" tooltip-position="right">?</a>
 				<h2>Incoming translations</h2>
 				<div class="addedcontent" id="addedtranslation">
+				<a class="toggle-icon">+</a>
 					<!-- Translation Should Go Here -->
 				</div>
 				</div>
@@ -166,8 +174,55 @@ get_header();
 	</div>	
 
 
-					
-	
+<!-- Functionality that only contextualizers can access
+  <nav id="contextualize" class="container"> 
+    
+
+ <a id="showcontext" class="contextbuttons" tooltip="Give context"><span class="icon compass"></span></a>
+
+
+  </nav>
+
+  <div id="givecontext">
+	<div class="popup conf-modal success" role="givecontext">
+   <div class="popup-container">
+   	
+  <textarea name="text" class="translationbox" placeholder="Help complete the picture of what is happening. Examples: give location, background history, point of views by those affected, previous related streams, social media"></textarea>
+  <div class="modal-footer">
+    <button id="sendcontext" class="exit context-but btn" onClick="">Submit</button>
+    </div>    
+  </div>
+
+</div>
+</div>					
+-->	
+
+<!-- Functionality that only can be accessible to admins
+  <nav id="admin" class="container"> 
+    
+    <a target="_blank" id="notify-share" class="alertbuttons" tooltip="Notify to share" tooltip-position="left"><span class="icon share-alt"></span></a>
+    
+    <a target="_blank" id="notify-contextualizers" class="alertbuttons" tooltip="Notify contextualizers" tooltip-position="left"><span class="icon compass"></span></a>
+    
+    <a target="_blank" id="notify-translators" class="alertbuttons" tooltip="Notify translators" tooltip-position="left"><span class="icon comment-dots"></span></a>
+
+    <div class="alertbuttons">
+<textarea name="text" class="notificationbox" placeholder="Write message to distant witnesses"></textarea>
+	<select class="selectpicker" data-width="130px" multiple title="Select senders">
+  <option value="all">Everyone</option>
+  <option value="translators">Translators</option>
+  <option value="contextualizers">Contextualizers</option>
+  <option value="user">User1</option>
+</select>
+<div class="submit">
+	<button  class="btn sendbtn" type="submit" value="Submit">Send</button>
+		</div>
+</div>
+
+ <a id="notify" class="alertbuttons" tooltip="Notify"><span class="icon bullhorn"></span></a>
+
+  </nav>
+-->
 
 
 	</div>
@@ -215,3 +270,6 @@ get_header();
 	-->
 </div>
 <!-- end new -->
+
+</body>
+</html>
