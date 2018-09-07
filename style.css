@@ -1324,14 +1324,18 @@ margin: 0 auto;
 top-margin: 10px;
 }
 
-.toggle-icon        {font-size:30px; 
+.toggle-icon        {
+					border-radius: 50%;
+          			width: 35px;
+          			height: 35px;
+          			font-size:19px; 
 					text-decoration:none; 
 					color:#667; 
+          			border-style: solid;
+          			border-color: #8CBAC9;
 					font-weight:bold;
-					float: left;
-					display: inline;
 					position: absolute;
-					left: 5%;
+					right: 2%;
 					}
 
 a.toggle-icon:hover {
@@ -1343,8 +1347,188 @@ a.toggle-icon:hover {
 	display: none;
 }
 
-#givecontext {
-	display: none;
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.popup-container {
+  transform: translateY(-40px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+.is-visible .popup-container {
+  transform: translateY(0);
+}
+
+.title-text img{
+  width: 50px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.conf-modal {
+  width: 290px;
+  max-width: 80%;
+  height: auto;
+  background-color: #fafafa;
+  border-radius: 3px;
+  box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+}
+
+.conf-modal h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  width: 90%;
+  display: inline-block;
+}
+
+.title-text {
+  display: inline-block;
+}
+
+.success h1 {
+  color: #8CBAC9;
+}
+
+.title-icon {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 30px;
+  margin-top: 30px;
+  position: absolute;
+}
+
+.conf-modal p {
+  color: #737373;
+  padding: 15px 30px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.modal-footer {
+  background: #fafafa;
+}
+
+.modal-footer .conf-but {
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #8CBAC9;
+  background: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.modal-footer .conf-but:hover {
+  background: #eee;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.modal-footer .conf-but.aqua {
+  color: #b7b9bc;
+}
+
+.container {
+  bottom: 0;
+  position: fixed;
+  margin: 1em;
+  right: 0;
+  max-width: 100px;
+}
+
+.alertbuttons {
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 
+              0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 20px auto 0;
+  color: #FFF;
+  background: #667;
+  cursor:pointer;
+  position: relative;
+  -webkit-transition: all .1s ease-out;
+          transition: all .1s ease-out;  
+}
+
+.alertbuttons:active, 
+.alertbuttons:focus, 
+.alertbuttons:hover {
+  box-shadow: 0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);
+    color: #8CBAC9;
+    background-color: #FFF !important;
+}
+
+.alertbuttons:not(:last-child) {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 0;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.container:hover
+.alertbuttons:not(:last-child) {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  margin: 15px auto 0;
+}
+
+/* Unessential styling for sliding up buttons at differnt speeds */
+
+.alertbuttons:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+          transition-delay: 25ms;
+  background-size: contain;
+}
+
+.alertbuttons:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 20ms;
+          background-size: contain;
+            right: 200px !important;
+}
+
+.alertbuttons:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 40ms;
+  background-color: #20b75a;
+  background-size: contain;
+}
+
+.alertbuttons:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 60ms;
+  background-color: #5f0ab5;
+  background-size: contain;
+}
+
+.alertbuttons:not(:last-child):nth-last-child(5) {
+  -webkit-transition-delay: 125ms;
+          transition-delay: 80ms;
+  background-color: #b72167;
+  background-size: contain;
 }
 
 
@@ -1438,7 +1622,45 @@ a.toggle-icon:hover {
   visibility: visible;
   opacity: 1;
 }
+.notificationbox {
+  height: 50px !important;
+  padding-bottom:10px !important;
+  margin-bottom:10px !important;
+  border-radius: 4px!important;
+  border: 1px solid #c4c4c4!important; 
+    font-size: 16px !important;
+    padding: 4px!important;
+    border-radius: 4px!important;
+    -moz-border-radius: 4px!important;
+    -webkit-border-radius: 4px!important;
+    box-shadow: 0px 0px 8px #d9d9d9!important;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9!important;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9!important;
+        transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s!important;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 
+.notificationbox:focus{
+    border: 1px solid #8CBAC9 !important;
+    box-shadow: 0px 0px 8px #8CBAC9 !important;
+    -moz-box-shadow: 0px 0px 8px #8CBAC9 !important;
+    -webkit-box-shadow: 0px 0px 8px #8CBAC9 !important;
+}
+
+
+.notificationbox:hover {
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+
+.sendbtn {
+    font-size: 12px !important;
+    padding: 5px !important;
+  border-radius: 6px !important;
+  margin: 4px !important;
+  float: left;
+}
 
 .moreinfo {
   border-radius: 50%;
@@ -1537,6 +1759,199 @@ a.toggle-icon:hover {
     -webkit-font-smoothing: antialiased;
   }
 
+
+  .bullhorn::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0a1";
+  font-size: 22px;
+  position: absolute;
+  right: 28%;
+  top: 22%;
+}
+
+  .share-alt::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f1e0";
+  font-size: 16px;
+  position: absolute;
+  right: 35%;
+  top: 23%;
+}
+
+ .title-text .share-alt::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f1e0";
+  font-size: 40px;
+  margin: 0 auto;
+    position: relative;
+    top: 10px;
+    right: 1px;
+    color: #b72167;
+}
+
+  .comment-dots::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f4ad";
+  font-size: 18px;
+  position: absolute;
+  right: 27%;
+  top: 20%;
+}
+
+ .title-text .comment-dots::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f4ad";
+  font-size: 40px;
+  margin: 0 auto;
+    position: relative;
+    top: 10px;
+    right: 1px;
+    color: #20b75a;
+}
+
+  .compass::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f14e";
+  font-size: 18px;
+  position: absolute;
+  right: 28%;
+  top: 20%;
+}
+
+ .title-text .compass::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f14e";
+  font-size: 40px;
+  margin: 0 auto;
+    position: relative;
+    top: 10px;
+    right: 1px;
+    color: #5f0ab5;
+}
+
+  #contextualize .compass::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f14e";
+  font-size: 25px;
+  margin: 0 auto;
+    position: relative;
+    top: 10px;
+    right: .5px;
+}
+
+.contextbuttons {
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 
+              0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 20px auto 0;
+  color: #FFF;
+  background: #667;
+  cursor:pointer;
+  position: relative;
+  -webkit-transition: all .1s ease-out;
+          transition: all .1s ease-out;  
+}
+
+.contextbuttons:active, 
+.contextbuttons:focus, 
+.contextbuttons:hover {
+  box-shadow: 0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);
+        color: #8CBAC9;
+    background-color: #FFF !important;
+}
+
+/* Might need these after for context tasks */
+.contextbuttons:not(:last-child) {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 0;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.container:hover
+.contextbuttons:not(:last-child) {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  margin: 15px auto 0;
+}
+
+/* Unessential styling for sliding up buttons at differnt speeds */
+
+.contextbuttons:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+          transition-delay: 25ms;
+  background-size: contain;
+}
+
+#givecontext {
+  position: fixed;
+  margin: 0 auto;
+  max-width: 90%;
+     left: 45% !important;
+  top: 85% !important;
+   transform: translate(-15%, -55%) !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+#givecontext.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+#givecontext .conf-modal {
+  width: 400px;
+  height: auto;
+  background-color: #fafafa;
+  border-radius: 3px;
+  box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24);
+}
+
+#givecontext textarea {
+  width: 100%;
+  height: 120px;
+}
+
+.modal-footer .context-but {
+  margin: 0 auto;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.modal-footer .context-but:hover {
+  background: #eee;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.positivebtn {
+  background-color: #8CBAC9 !important;
+  color: #FFF !important;
+}
+
 @media only screen and (max-width: 1024px) {
 
     
@@ -1572,12 +1987,6 @@ height: 370px;
 	padding-top: 0px;
 	margin: 0;
 }
-
-
-
-
-
-
 
 body {
 	margin: 0;
@@ -1677,6 +2086,22 @@ time {
 #refresh {
 margin-top: -46px;
 	}
+
+#givecontext {
+     left: 40% !important;
+  top: 85% !important;
+   transform: translate(-15%, -60%) !important;
+}
+
+#givecontext textarea{
+    height: 140px;
+    font-size: 18px !important;
+}
+
+.context-but {
+  font-size: 14px !important;
+}
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -1709,8 +2134,14 @@ height: 400px;
     left: 47.5% !important;
   top: 50% !important;
    transform: translate(-50%, -52.5%) !important;
-}	
-	
+}
+
+#givecontext {
+     left: 37.5% !important;
+  top: 85% !important;
+   transform: translate(-15%, -63.5%) !important;
+}
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -1820,6 +2251,12 @@ width:90%;
     top: -25px;
   left: 2px;
 }
+
+#givecontext {
+     left: 38% !important;
+  top: 80% !important;
+   transform: translate(-20%, -62%) !important;
+}
   
 }
 
@@ -1841,6 +2278,17 @@ width:90%;
   font-size: 30px;
 }
 
+#givecontext {
+  max-width: 95%;
+     left: 32% !important;
+  top: 80% !important;
+   transform: translate(-20%, -68%) !important;
+}
+
+#givecontext textarea{
+    height: 160px;
+}
+
 }
 
 @media only screen and (max-width: 320px) {
@@ -1852,6 +2300,17 @@ width:90%;
 
 .translationtips h1 {
   font-size: 26px !important;
+}
+
+#givecontext {
+  max-width: 98%;
+     left: 31% !important;
+  top: 80% !important;
+   transform: translate(-20%, -69%) !important;
+}
+
+#givecontext textarea{
+    height: 190px;
 }
 
 }
