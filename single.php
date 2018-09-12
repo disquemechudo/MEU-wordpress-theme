@@ -271,5 +271,13 @@ get_header();
 </div>
 <!-- end new -->
 
+    <label class="switch" id="admin-role">
+        <input type="checkbox">
+        <span class="slider-switch square">
+            <span class="switch-notify">Notify</span>
+            <span class="switch-context">Give context</span>
+        </span>
+    </label>
+
 </body>
 </html>
