@@ -1952,6 +1952,100 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #FFF !important;
 }
 
+#admin-role {
+	display: none;
+}
+
+.switch {
+    position: fixed;
+     left: 50% !important;
+    top: 90% !important;
+   transform: translate(-50%, -10%) !important;
+    display: inline-block;
+    width: 270px;
+    height: 50px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e8e8e8;
+    -webkit-transition: .4s;
+    transition: .4s;
+    user-select: none;
+  }
+  
+  .slider-switch:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 132px;
+    left: 7px;
+    bottom: 5px;
+    background-color: #8CBAC9;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider-switch {
+    background-color: #e8e8e8;
+  }
+  
+  input:focus + .slider-switch {
+    box-shadow: 0 0 1px #8CBAC9;
+  }
+  
+  input:checked + .slider-switch:before{
+    -webkit-transform: translateX(124px);
+    -ms-transform: translateX(124px);
+    transform: translateX(124px);
+    background-color: #8CBAC9;
+  }
+  
+
+  .slider-switch.square:before {
+    border-radius: 4px;
+  }
+  
+  .switch-notify {
+    position: absolute;
+    top: 50%;
+    transform: translate(100%, -50%);
+    left: 15px;
+    color: #FFF;
+  }
+
+  .switch-context {
+    position: absolute;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    right: 5px;
+    color: #666667;
+  }
+
+  input:checked + .slider-switch > .switch-context {
+    color: #FFF;
+  }
+
+  input:checked + .slider-switch > .switch-notify {
+    color: #666667;
+  }
+
+    #admin-notify {
+    display: none;
+  }
+
+  #contextualize {
+    display: none;
+  }
+
+
 @media only screen and (max-width: 1024px) {
 
     
@@ -2288,6 +2382,13 @@ width:90%;
 #givecontext textarea{
     height: 160px;
 }
+
+.switch {
+       left: 50% !important;
+    top: 20% !important;
+   transform: translate(-50%, -80%) !important;
+  }
+
 
 }
 
