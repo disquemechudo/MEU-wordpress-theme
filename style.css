@@ -1290,6 +1290,7 @@ border: 1px solid #c4c4c4;
     -webkit-box-shadow: 0px 0px 8px #d9d9d9;
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+float: left;
 }
 
 .translatebtn {
@@ -1682,15 +1683,16 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
 .moretips {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
   float: left;
   color: #FFF;
   background: #8CBAC9;
   cursor:pointer;
   position: absolute;
-    top: 0;
-  left: -25px;
+    bottom: 10px;
+  left: -30px;
 }
 
 .moretips:hover {
@@ -1904,12 +1906,13 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
   position: fixed;
   margin: 0 auto;
   max-width: 90%;
-     left: 45% !important;
-  top: 85% !important;
-   transform: translate(-15%, -55%) !important;
+     left: 53% !important;
+  bottom: 0% !important;
+   transform: translate(-47%, 0%) !important;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  z-index: 1;
 }
 
 #givecontext.is-visible {
@@ -1929,6 +1932,7 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 #givecontext textarea {
   width: 100%;
   height: 120px;
+  float: left;
 }
 
 .modal-footer .context-but {
@@ -2182,14 +2186,18 @@ margin-top: -46px;
 	}
 
 #givecontext {
-     left: 40% !important;
-  top: 85% !important;
-   transform: translate(-15%, -60%) !important;
+     left: 53% !important;
+  bottom: 0% !important;
+   transform: translate(-47%, -0%) !important;
 }
 
 #givecontext textarea{
-    height: 140px;
+    height: 200px;
     font-size: 18px !important;
+}
+
+#givecontext .conf-modal {
+  width: 500px;
 }
 
 .context-but {
@@ -2231,9 +2239,9 @@ height: 400px;
 }
 
 #givecontext {
-     left: 37.5% !important;
-  top: 85% !important;
-   transform: translate(-15%, -63.5%) !important;
+     left: 54% !important;
+  bottom: 2% !important;
+   transform: translate(-46%, -2%) !important;
 }
 
 }
@@ -2342,14 +2350,17 @@ width:90%;
 }
 
 .moretips {
-    top: -25px;
-  left: 2px;
+  left: 25px;
 }
 
 #givecontext {
-     left: 38% !important;
-  top: 80% !important;
-   transform: translate(-20%, -62%) !important;
+     left: 55% !important;
+  bottom: 0% !important;
+   transform: translate(-45%, -0%) !important;
+}
+
+#givecontext .conf-modal {
+  width: 700px;
 }
   
 }
@@ -2360,7 +2371,7 @@ width:90%;
 .translationtips {
   font-size: 18px !important;
     left: 45% !important;
-  top: 50% !important;
+  top: 55% !important;
    transform: translate(-50%, -55%) !important;
 }
 
@@ -2373,10 +2384,14 @@ width:90%;
 }
 
 #givecontext {
-  max-width: 95%;
-     left: 32% !important;
-  top: 80% !important;
-   transform: translate(-20%, -68%) !important;
+  bottom: 0 !important;
+}
+
+#givecontext .popup-container {
+width: 100vw;
+  position: relative;
+  left: 52%;
+  margin-left: -52vw;
 }
 
 #givecontext textarea{
@@ -2403,12 +2418,6 @@ width:90%;
   font-size: 26px !important;
 }
 
-#givecontext {
-  max-width: 98%;
-     left: 31% !important;
-  top: 80% !important;
-   transform: translate(-20%, -69%) !important;
-}
 
 #givecontext textarea{
     height: 190px;
