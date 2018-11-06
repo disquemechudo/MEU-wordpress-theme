@@ -66,6 +66,14 @@ get_header();
 
 <div class="box" id="translation">
 
+
+
+
+<textarea name="text" class="translationbox" id="translation_input" placeholder="Translate video content from Portuguese to English here"></textarea>
+<div class="translatebtn submit">
+	<button id="translation_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
+		</div>
+
 <a id="showtips" class="moretips">i</a>
 	<div class="hiddentips">
 	<div class="translationtips">
@@ -83,14 +91,8 @@ get_header();
 </div>
 
 
-
 </div>
 
-
-<textarea name="text" class="translationbox" id="translation_input" placeholder="Translate video content from Portuguese to English here"></textarea>
-<div class="translatebtn submit">
-	<button id="translation_submit" class="btn" type="submit" value="Submit" disabled>Submit</button>
-		</div>
 </div>
 
 <!-- 
