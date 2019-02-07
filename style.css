@@ -1692,7 +1692,7 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
   cursor:pointer;
   position: absolute;
     bottom: 10px;
-  left: -30px;
+  left: -40px;
 }
 
 .moretips:hover {
@@ -1849,6 +1849,71 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
     right: .5px;
 }
 
+ .globe-americas::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f57d";
+  font-size: 35px;
+  position: relative;
+  top: 14%;
+}
+
+.exclamation-circle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f06a";
+  font-size: 35px;
+  position: relative;
+  top: 14%;
+}
+
+.puzzle-piece::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f12e";
+  font-size: 35px;
+  position: relative;
+  left: 6%;
+  top: 14%;
+}
+
+.fist-raised::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f6de";
+  font-size: 35px;
+  position: relative;
+  top: 14%;
+}
+
+.user-check::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f4fc";
+  font-size: 35px;
+  position: relative;
+  left: 7%;
+  top: 14%;
+}
+
+.laptop::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f109";
+  font-size: 35px;
+  position: relative;
+  top: 14%;
+}
+
+.question-circle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f059";
+  font-size: 35px;
+  position: relative;
+  top: 14%;
+}
+
 .contextbuttons {
   box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 
               0px 4px 12px -7px rgba(0, 0, 0, 0.15);
@@ -1922,7 +1987,7 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #givecontext .conf-modal {
-  width: 400px;
+  width: 745px;
   height: auto;
   background-color: #fafafa;
   border-radius: 3px;
@@ -1931,7 +1996,7 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
 #givecontext textarea {
   width: 100%;
-  height: 120px;
+  height: 80px;
   float: left;
 }
 
@@ -2048,6 +2113,58 @@ font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
   #contextualize {
     display: none;
   }
+
+  .card {
+  background-color: #2a2c3b;
+  min-width: 100%;
+  min-height: 85px;
+}
+.card {display: flex}
+.card--content {
+    color: #2a2c3b;
+    background-color: #FFF !important;
+  min-width: 70px;
+  height: 70px;
+  margin: 7.5px;
+  border-radius:50%;
+  border:1px solid #fff;
+  padding:1px;
+  opacity: .6;
+}
+.card--content:hover{
+  transform:scale(1.09);
+  border:2px solid #8CBAC9;
+  padding:0px;
+  opacity: .8;
+}
+
+.activecard{
+  color: #8CBAC9;
+  min-width: 80px;
+  height: 80px;
+  border:3px solid #8CBAC9;
+    margin: 5px;
+    opacity: 1;
+}
+
+
+.card {
+  overflow-x: auto;
+}
+.card::-webkit-scrollbar {
+  display: none;
+}
+hr{
+  margin-top:30px;
+  width:60%;
+}
+.card--content img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+}
+
+
 
 
 @media only screen and (max-width: 1024px) {
@@ -2186,22 +2303,23 @@ margin-top: -46px;
 	}
 
 #givecontext {
-     left: 53% !important;
+     left: 54.5% !important;
   bottom: 0% !important;
-   transform: translate(-47%, -0%) !important;
+   transform: translate(-45.5%, -0%) !important;
 }
 
 #givecontext textarea{
-    height: 200px;
     font-size: 18px !important;
 }
 
-#givecontext .conf-modal {
-  width: 500px;
-}
+
 
 .context-but {
   font-size: 14px !important;
+}
+
+.moretips {
+  left: 5px;
 }
 
 }
@@ -2240,8 +2358,12 @@ height: 400px;
 
 #givecontext {
      left: 54% !important;
-  bottom: 2% !important;
-   transform: translate(-46%, -2%) !important;
+  bottom: 0% !important;
+   transform: translate(-46%, -0%) !important;
+}
+
+#givecontext .conf-modal {
+  width: 600px;
 }
 
 }
@@ -2349,9 +2471,7 @@ width:90%;
   left: 0;
 }
 
-.moretips {
-  left: 25px;
-}
+
 
 #givecontext {
      left: 55% !important;
@@ -2360,7 +2480,7 @@ width:90%;
 }
 
 #givecontext .conf-modal {
-  width: 700px;
+  width: 770px;
 }
   
 }
@@ -2369,10 +2489,10 @@ width:90%;
 @media only screen and (max-width: 500px) {
 
 .translationtips {
-  font-size: 18px !important;
+  font-size: 16px !important;
     left: 45% !important;
-  top: 55% !important;
-   transform: translate(-50%, -55%) !important;
+  top: 50% !important;
+   transform: translate(-50%, -50%) !important;
 }
 
 .translationtips ul {
@@ -2395,15 +2515,23 @@ width: 100vw;
 }
 
 #givecontext textarea{
-    height: 160px;
+    height: 90px;
 }
 
 .switch {
        left: 50% !important;
-    top: 20% !important;
+    top: 60px !important;
    transform: translate(-50%, -80%) !important;
   }
 
+
+}
+
+@media only screen and (max-width: 420px) {
+
+#givecontext textarea{
+    height: 145px;
+}
 
 }
 
@@ -2420,7 +2548,7 @@ width: 100vw;
 
 
 #givecontext textarea{
-    height: 190px;
+    height: 145px;
 }
 
 }
