@@ -32,7 +32,7 @@ get_header();
 <!-- (Optional) Latest compiled and minified JavaScript translation files -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
 	
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">	
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </head>
 
@@ -189,14 +189,38 @@ get_header();
 	<div class="popup conf-modal success" role="givecontext">
    <div class="popup-container">
    	
-  <textarea name="text" class="translationbox" placeholder="Help complete the picture of what is happening. Examples: give location, background history, point of views by those affected, previous related streams, social media"></textarea>
+  <textarea name="text" class="translationbox contextbox" id="generalcontext" placeholder="Help complete the picture of what is happening. Choose one of the options below or add anything that will help us get a better sense of this issue."></textarea>
+
   <div class="modal-footer">
     <button id="sendcontext" class="exit context-but btn" onClick="">Submit</button>
-    </div>    
+    </div> 
+<section class="card" id="contextcard">
+  <div class="card--content" id="immediatecontext">
+    <span class="icon exclamation-circle"></span>
+  </div>
+  <div class="card--content" id="locationcontext">
+    <span class="icon globe-americas"></span>
+  </div>
+  <div class="card--content" id="backgroundcontext">
+    <span class="icon puzzle-piece"></span>
+  </div>
+  <div class="card--content" id="similarcontext"> 
+    <span class="icon fist-raised"></span>
+  </div>
+  <div class="card--content" id="localcontext">
+    <span class="icon user-check"></span>
+  </div>
+  <div class="card--content" id="socialmediacontext">
+    <span class="icon laptop"></span>
+  </div>
+  <div class="card--content" id="questioncontext">
+    <span class="icon question-circle"></span>
+  </div>
+</section>
   </div>
 
 </div>
-</div>					
+</div>				
 -->	
 
 <!-- Functionality that only can be accessible to admins
