@@ -2474,12 +2474,13 @@ width:90%;
 
 
 #givecontext {
-     left: 55% !important;
+     left: 45% !important;
   bottom: 0% !important;
    transform: translate(-45%, -0%) !important;
 }
 
 #givecontext .conf-modal {
+max-width: 100%;
   width: 770px;
 }
   
